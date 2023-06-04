@@ -72,15 +72,15 @@
 ```
 branchAでdevelopへのプルリクエストを作成し、それが受理されたあと、branchBがdevelopへのプルリクエストを作成すると、コンフリクトが発生し、下記のようなエラーメッセージが表示され、ローカルのSourceTreeでは下記のように表示される
 
-* <エラーメッセージ> *
-![エラーメッセージ](https://github.com/umidori/conflict/blob/main/img/conflict.png)
+**エラーメッセージ**
+![conflict.png](https://github.com/umidori/conflict/blob/main/img/conflict.png)
 
-* <ローカルのSourceTreeでの表示> *
-![ローカルのSourceTreeでの表示](https://github.com/umidori/conflict/blob/main/img/SourceTree(comment).png)
+**ローカルのSourceTreeでの表示**
+![SourceTree(comment).png](https://github.com/umidori/conflict/blob/main/img/SourceTree(comment).png)
 
 コンフリクトを解消するには、SourceTreeで下記の手順を実施する
 1. メニューの端末をクリックし、端末を起動する
-![ローカルのSourceTreeでの表示](https://github.com/umidori/conflict/blob/main/img/branchB-pull%20origin.png)
+![branchB-pull%20origin.png](https://github.com/umidori/conflict/blob/main/img/branchB-pull%20origin.png)
 2. 起動した端末で下記のコマンドを実行する（2のコマンドは環境により不要な場合がある）
 	```text
 	$ git checkout branchB
@@ -88,7 +88,7 @@ branchAでdevelopへのプルリクエストを作成し、それが受理され
 	$ git pull origin develop
 	```
 	**コマンド実施後のSourceTreeの表示**
-	![コマンド実施後のSourceTreeの表示](https://github.com/umidori/conflict/blob/main/img/branchB-pull%20origin.png)
+	![branchB-pull%20origin.png](https://github.com/umidori/conflict/blob/main/img/branchB-pull%20origin.png)
 3. コンフリクトが反映されたindex.htmlが生成されるので、それをエディタ等で修正し、コンフリクトを解消する]
 	**コンフリクトが反映されたindex.html**
 	```html
@@ -128,6 +128,6 @@ branchAでdevelopへのプルリクエストを作成し、それが受理され
 	```
 4. コンフリクトが解消したindex.htmlをコミットし、リモートにプッシュする
 **プッシュ後のSourceTreeの表示**
-![プッシュ後のSourceTreeの表示](https://github.com/umidori/conflict/blob/main/img/branchB-conflict%20solved.png)
+![branchB-conflict%20solved.png](https://github.com/umidori/conflict/blob/main/img/branchB-conflict%20solved.png)
 
 これで、branchBのプルリクエストのエラーは解消され、受理されるのを待つ状態になる。
