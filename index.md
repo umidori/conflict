@@ -74,16 +74,16 @@ branchAでdevelopへのプルリクエストを作成し、それが受理され
 
 **エラーメッセージ**
 
-![img/conflict.png](https://github.com/umidori/conflict/blob/main/img/conflict.png)
+![conflict.png](https://github.com/umidori/conflict/blob/main/conflict.png)
 
 **ローカルのSourceTreeでの表示**
 
-![img/SourceTree(comment).png](https://github.com/umidori/conflict/blob/main/img/SourceTree(comment).png)
+![SourceTree(comment).png](https://github.com/umidori/conflict/blob/main/SourceTree(comment).png)
 
 コンフリクトを解消するには、SourceTreeで下記の手順を実施する
 1. メニューの端末をクリックし、端末を起動する
 
-![img/branchB-pull%20origin.png](https://github.com/umidori/conflict/blob/main/img/branchB-pull%20origin.png)
+![branchB-pull%20origin.png](https://github.com/umidori/conflict/blob/main/branchB-pull%20origin.png)
 
 2. 起動した端末で下記のコマンドを実行する（2のコマンドは環境により不要な場合がある）
 	```text
@@ -93,7 +93,7 @@ branchAでdevelopへのプルリクエストを作成し、それが受理され
 	```
 	**コマンド実施後のSourceTreeの表示**
 
-	![img/branchB-pull%20origin.png](https://github.com/umidori/conflict/blob/main/img/branchB-pull%20origin.png)
+	![branchB-pull%20origin.png](https://github.com/umidori/conflict/blob/main/branchB-pull%20origin.png)
 
 3. コンフリクトが反映されたindex.htmlが生成されるので、それをエディタ等で修正し、コンフリクトを解消する
 	**コンフリクトが反映されたindex.html**
@@ -136,6 +136,6 @@ branchAでdevelopへのプルリクエストを作成し、それが受理され
 
 **プッシュ後のSourceTreeの表示**
 
-![img/branchB-conflict%20solved.png](https://github.com/umidori/conflict/blob/main/img/branchB-conflict%20solved.png)
+![branchB-conflict%20solved.png](https://github.com/umidori/conflict/blob/main/branchB-conflict%20solved.png)
 
 これで、branchBのプルリクエストのエラーは解消され、受理されるのを待つ状態になる。
