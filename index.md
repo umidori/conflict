@@ -72,11 +72,12 @@
 </body>
 </html>
 ```
-branchAでdevelopへのプルリクエストを作成し、それが受理されたあと、branchBがdevelopへのプルリクエストを作成すると、コンフリクトが発生し、下記のようなエラーメッセージが表示され、ローカルのSourceTreeでは下記のように表示される
-
+branchAでdevelopへのプルリクエストを作成し、それが受理されたあと、branchBがdevelopへのプルリクエストを作成すると、コンフリクトが発生する。BitBucketでは下記のようなエラーメッセージが表示さる。
 **エラーメッセージ**
 
 ![conflict.png](https://umidori.github.io/conflict/img/conflict.png)
+
+この時、ローカルのSourceTreeでは下記のように表示される
 
 **ローカルのSourceTreeでの表示**
 
@@ -87,7 +88,7 @@ branchAでdevelopへのプルリクエストを作成し、それが受理され
 
 ![branchB-pull%20origin.png](https://umidori.github.io/conflict/img/branchB-pull%20origin.png)
 
-2. 起動した端末で下記のコマンドを実行する（2のコマンドは環境により不要な場合がある）
+2. 起動した端末で下記のコマンドを実行する（2番目のコマンド git config 〜は環境により不要な場合がある）
 	```text
 	$ git checkout branchB
 	$ git config pull.rebase false
