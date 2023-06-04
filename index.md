@@ -22,7 +22,7 @@
 ## 具体例
 上記コンフリクトの解消方法を例を使って説明しよう。今、Bitbucketのリポジトリにdevelopというメインのブランチがあり、そのブランチは下記のファイル「index.html」を持つとする。このブランチから、サブブランチ「branchA」と「branchB」を作成し、それぞれ下記のように修正する。
 
-* <develop - index.html> *
+* develop - index.html *
 ```html
 <!DOCTYPE html>
 <html>
