@@ -22,7 +22,7 @@
 ## 具体例
 上記コンフリクトの解消方法を例を使って説明しよう。今、Bitbucketのリポジトリにdevelopというメインのブランチがあり、そのブランチは下記のファイル「index.html」を持つとする。このブランチから、サブブランチ「branchA」と「branchB」を作成し、それぞれ下記のように修正する。
 
-* develop - index.html *
+**develop - index.html**
 ```html
 <!DOCTYPE html>
 <html>
@@ -38,7 +38,7 @@
 </body>
 </html>
 ```
-* <branchA - index.html> *
+**branchA - index.html**
 ```html
 <!DOCTYPE html>
 <html>
@@ -54,7 +54,7 @@
 </body>
 </html>
 ```
-* <branchB - index.html> *
+**branchB - index.html**
 ```html
 <!DOCTYPE html>
 <html>
@@ -76,21 +76,21 @@ branchAでdevelopへのプルリクエストを作成し、それが受理され
 ![エラーメッセージ](https://github.com/umidori/conflict/blob/main/img/conflict.png)
 
 * <ローカルのSourceTreeでの表示> *
-![エラーメッセージ](https://github.com/umidori/conflict/blob/main/img/SourceTree(comment).png)
+![ローカルのSourceTreeでの表示](https://github.com/umidori/conflict/blob/main/img/SourceTree(comment).png)
 
 コンフリクトを解消するには、SourceTreeで下記の手順を実施する
 1. メニューの端末をクリックし、端末を起動する
-![ローカルのSourceTreeでの表示](:/7ae65c018a7e4eb2be898a42820d146d)
+![ローカルのSourceTreeでの表示](https://github.com/umidori/conflict/blob/main/img/branchB-pull%20origin.png)
 2. 起動した端末で下記のコマンドを実行する（2のコマンドは環境により不要な場合がある）
 	```text
 	$ git checkout branchB
 	$ git config pull.rebase false
 	$ git pull origin develop
 	```
-	**<コマンド実施後のSourceTreeの表示>**
-	![branchB-pull origin.png](https://github.com/umidori/conflict/blob/main/img/branchB-pull%20origin.png)
+	**コマンド実施後のSourceTreeの表示**
+	![コマンド実施後のSourceTreeの表示](https://github.com/umidori/conflict/blob/main/img/branchB-pull%20origin.png)
 3. コンフリクトが反映されたindex.htmlが生成されるので、それをエディタ等で修正し、コンフリクトを解消する]
-	* <コンフリクトが反映されたindex.html> *
+	**コンフリクトが反映されたindex.html**
 	```html
 	<!DOCTYPE html>
 	<html>
@@ -110,7 +110,7 @@ branchAでdevelopへのプルリクエストを作成し、それが受理され
 	</body>
 	</html>
 	```
-	* <修正後のindex.html（例）> *
+	**修正後のindex.html（例）**
 	```html
 	<!DOCTYPE html>
 	<html>
@@ -127,7 +127,7 @@ branchAでdevelopへのプルリクエストを作成し、それが受理され
 	</html>
 	```
 4. コンフリクトが解消したindex.htmlをコミットし、リモートにプッシュする
-* <プッシュ後のSourceTreeの表示> *
-![branchB-conflict solved.png](:/cb06ce95e96a42a7bdc498f92c607108)
+**プッシュ後のSourceTreeの表示**
+![プッシュ後のSourceTreeの表示](https://github.com/umidori/conflict/blob/main/img/branchB-conflict%20solved.png)
 
 これで、branchBのプルリクエストのエラーは解消され、受理されるのを待つ状態になる。
